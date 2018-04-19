@@ -1,0 +1,20 @@
+{
+    "name": "zoran-wang/xmoov",
+    "description": "xmoov 是FFMPEG流媒体服务器服务包，可以让你快速搭建流媒体播放平台",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "wong1989",
+            "email": "skyandsunning@163.com"
+        }
+    ],
+    "autoload": {
+        "prs-4":{
+            "Zoran\\Xmoov\\": "src"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "require": {}
+}
