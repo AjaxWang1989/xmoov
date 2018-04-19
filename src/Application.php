@@ -33,6 +33,7 @@ class Application
     }
 
     public function run(){
+        ob_start();
         $serverConfig = $this->server->init();
         if($serverConfig){
             if($this->config){
