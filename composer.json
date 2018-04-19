@@ -16,5 +16,7 @@
             "src/helpers.php"
         ]
     },
-    "require": {}
+    "require": {
+        "symfony/http-foundation": "~2.3"
+    }
 }
