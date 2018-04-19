@@ -16,17 +16,9 @@ class XmoovStreamToken
 {
     private $tokens = [];
 
-    private $config = null;
-
     protected $secret = null;
 
     protected $expires = null;
-
-    /**
-     * @var Cookie
-     * */
-    protected $cookie = null;
-
     /**
      * @var Request
      * */

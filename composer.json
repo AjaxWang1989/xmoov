@@ -19,5 +19,10 @@
     "require": {
         "symfony/http-foundation": "~2.3",
         "symfony/process": "~2.7"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.0.1.x-dev"
+        }
     }
 }
