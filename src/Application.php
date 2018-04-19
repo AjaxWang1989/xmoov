@@ -32,6 +32,10 @@ class Application
         $this->handler = $handler;
     }
 
+    public function setServer(StreamServer $server) {
+        return ($this->server = $server) ? $this : null;
+    }
+
     public function run(){
         ob_start();
         $serverConfig = $this->server->init();
