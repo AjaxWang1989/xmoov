@@ -30,6 +30,7 @@ class Application
      * @var FFMPEGService
      * */
     protected $ffmpegService = null;
+
     /**
      * 构造函数
      * @param array $config
