@@ -26,7 +26,13 @@ class Application
 
     protected $handler = null;
 
-    public function __construct(array $config,  StreamServer $server, StreamHandler $handler = null) {
+    /**
+     * 构造函数
+     * @param array $config
+     * @param StreamServer|null $server
+     * @param StreamHandler|null $handler
+     * */
+    public function __construct(array $config,  $server = null,  $handler = null) {
         $this->server = $server;
         $this->config = $config;
         $this->handler = $handler;
