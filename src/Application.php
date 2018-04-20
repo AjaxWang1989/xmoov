@@ -69,11 +69,11 @@ class Application
         return false;
     }
 
-    public function encrypt($file, $tempFile)
+    public function encode($file, $tempFile, $encrypt)
     {
         $this->ffmpegService->execute("-i {$file} {$tempFile}");
         unlink($file);
-        $this->handler->encrypt($tempFile);
+        $this->handler->encode($tempFile, $encrypt);
     }
 
     public function __set($name, $value)
