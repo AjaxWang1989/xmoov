@@ -24,7 +24,7 @@ class XmoovStreamToken
      * */
     protected $request = null;
 
-    public function __construct($secret, $expires, Request $request)
+    public function __construct($secret, $expires, $request)
     {
         $this->secret = $secret;
         $this->expires = $expires;

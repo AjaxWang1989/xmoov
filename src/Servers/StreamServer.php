@@ -20,7 +20,7 @@ abstract class StreamServer
      * */
     protected $request = null;
 
-    public function __construct(Request $request , $storage, $config)
+    public function __construct($request , $storage, $config)
     {
         $this->request = $request;
         $this->storage = $storage;
