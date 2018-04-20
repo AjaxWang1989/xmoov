@@ -13,11 +13,19 @@ use Zoran\Xmoov\Stream\XmoovStreamToken;
 
 class PrivateImageServer extends ImageServer
 {
+    /**
+     * @var XmoovStreamToken
+     * */
+    protected $token = null;
+
+    public function setToken(XmoovStreamToken $token) {
+        $this->token = $token;
+    }
+
     public function init()
     {
         if ($this->request->get('key') && $this->request->get('file')) {
-            $xsToken = new XmoovStreamToken($this->config);
-            if($xsToken->isValid ($this->request->get('file'), $this->request->get('key'))) {
+            if($this->token->isValid ($this->request->get('file'), $this->request->get('key'))) {
                 $file = $this->request->get('file');
             } else {
                 $file = 'no_access.jpg';

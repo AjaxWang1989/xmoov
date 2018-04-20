@@ -9,48 +9,56 @@
 namespace Zoran\Xmoov\Stream;
 
 
+use Symfony\Component\HttpFoundation\Cookie;
+use Symfony\Component\HttpFoundation\Request;
+
 class XmoovStreamToken
 {
     private $tokens = [];
 
-    private $config = null;
+    protected $secret = null;
 
-    public function __construct($config)
+    protected $expires = null;
+    /**
+     * @var Request
+     * */
+    protected $request = null;
+
+    public function __construct($secret, $expires, Request $request)
     {
-        $this->config = $config;
+        $this->secret = $secret;
+        $this->expires = $expires;
+        $this->request = $request;
     }
 
-    public function getKey($file)
+    public function getKey($path)
     {
-        return md5($file . $this->config['token_key']);
+        return md5($path . $this->secret);
     }
 
-    public function getToken($file)
+    public function getToken($path)
     {
-        $key = $this->getKey($file);
+        $key = $this->getKey($path);
         if (isset($this->tokens[$key])) {
             return $this->tokens[$key];
         } else {
-            if (isset($_COOKIE[$key])) {
-                return $_COOKIE[$key];
-            }
+            return $this->request->cookies->get($key);
         }
-        return false;
     }
 
-    public function isValid($file, $token)
+    public function isValid($path, $token)
     {
-        if ($token == $this->getToken($file)) {
+        if ($token == $this->getToken($path)) {
             return true;
         }
         return false;
     }
 
-    public function setToken($file)
+    public function setToken($path)
     {
-        $key   = $this->getKey($file);
+        $key   = $this->getKey($path);
         $token = md5(uniqid(rand(), 1));
-        setcookie($key, $token, time() + $this->config['token_expires'], '/', false);
+        setcookie($key, $token, time() + $this->expires, '/', false);
         $this->tokens[$key] = $token;
         return $token;
     }
