@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b4d5485-eaf9-4d72-b499-42dcae1fdf4a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/Servers/StreamServer.php" afterPath="$PROJECT_DIR$/src/Servers/StreamServer.php" />
-      <change beforePath="$PROJECT_DIR$/src/Stream/XmoovStreamToken.php" afterPath="$PROJECT_DIR$/src/Stream/XmoovStreamToken.php" />
+      <change beforePath="$PROJECT_DIR$/src/FlvStreamHandle.php" afterPath="$PROJECT_DIR$/src/FlvStreamHandle.php" />
+      <change beforePath="$PROJECT_DIR$/src/StreamHandler.php" afterPath="$PROJECT_DIR$/src/StreamHandler.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,11 +27,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FlvStreamHandle.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FlvStreamHandle.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/FlvStreamHandle.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="136">
+              <caret line="32" column="20" lean-forward="false" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -41,8 +40,8 @@
       <file leaf-file-name="StreamHandler.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/StreamHandler.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="136">
+              <caret line="13" column="27" lean-forward="false" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -68,11 +67,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="XmoovStreamToken.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="XmoovStreamToken.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Stream/XmoovStreamToken.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="26" column="50" lean-forward="false" selection-start-line="26" selection-start-column="50" selection-end-line="26" selection-end-column="50" />
+            <state relative-caret-position="123">
+              <caret line="21" column="7" lean-forward="true" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -90,6 +89,8 @@
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/src/Servers/StreamServer.php" />
         <option value="$PROJECT_DIR$/src/Stream/XmoovStreamToken.php" />
+        <option value="$PROJECT_DIR$/src/StreamHandler.php" />
+        <option value="$PROJECT_DIR$/src/FlvStreamHandle.php" />
       </list>
     </option>
   </component>
@@ -190,12 +191,12 @@
       <option name="presentableId" value="Default" />
       <updated>1524204440416</updated>
       <workItem from="1524204443397" duration="284000" />
-      <workItem from="1524207151125" duration="2865000" />
+      <workItem from="1524207151125" duration="3456000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3300000" />
+    <option name="totallyTimeSpent" value="3891000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="6" y="23" width="1440" height="827" extended-state="0" />
@@ -274,22 +275,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/FlvStreamHandle.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/StreamHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Servers/StreamServer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
@@ -300,8 +285,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Stream/XmoovStreamToken.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="26" column="50" lean-forward="false" selection-start-line="26" selection-start-column="50" selection-end-line="26" selection-end-column="50" />
+        <state relative-caret-position="123">
+          <caret line="21" column="7" lean-forward="true" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StreamHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="13" column="27" lean-forward="false" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FlvStreamHandle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="32" column="20" lean-forward="false" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
           <folding />
         </state>
       </provider>

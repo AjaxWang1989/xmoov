@@ -11,7 +11,7 @@ namespace Zoran\Xmoov;
 
 interface StreamHandler
 {
-    public  function encrypt($file);
+    public  function encode($file);
 
     public  function decrypt($fileHandle, $bufferSize);
 }

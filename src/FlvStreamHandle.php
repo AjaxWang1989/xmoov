@@ -24,12 +24,14 @@ class FlvStreamHandle implements StreamHandler
 
     const ENCRYPT_ASCII_MODE = 16;
 
-    public  function encrypt($file)
+    public  function encode($file, $encrypt = true)
     {
         $flvTool2 = xmoovPath('/tools/flvtool2/flvtool2') ;
         $process  = new Process("{$flvTool2} -U {$file}");
         $process->run();
-
+        if(!$encrypt){
+            return ;
+        }
         $filename      = basename($file);
         $origin          = $file;
         $originJM        = dirname($file) . '\\' . $filename . 'jm';
