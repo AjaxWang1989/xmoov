@@ -26,10 +26,16 @@ class Application
 
     protected $handler = null;
 
+    /**
+     * @var FFMPEGService
+     * */
+    protected $ffmpegService = null;
+
     public function __construct(array $config,  StreamServer $server, StreamHandler $handler = null) {
         $this->server = $server;
         $this->config = $config;
         $this->handler = $handler;
+        $this->ffmpegService = new FFMPEGService();
     }
 
     public function setServer(StreamServer $server) {
@@ -55,5 +61,24 @@ class Application
             }
         }
         return false;
+    }
+
+    public function encrypt($file, $tempFile)
+    {
+        $this->ffmpegService->execute("-i {$file} {$tempFile}");
+        unlink($file);
+        $this->handler->encrypt($tempFile);
+    }
+
+    public function __set($name, $value)
+    {
+        // TODO: Implement __set() method.
+        $this->{$name} = $value;
+    }
+
+    public function __get($name)
+    {
+        // TODO: Implement __get() method.
+        return $this->{$name};
     }
 }

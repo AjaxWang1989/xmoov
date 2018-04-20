@@ -26,7 +26,7 @@ class FlvStreamHandle implements StreamHandler
 
     public  function encrypt($file)
     {
-        $flvTool2 = base_path('support') . '/flvtool2/flvtool2';
+        $flvTool2 = xmoovPath('/tools/flvtool2/flvtool2') ;
         $process  = new Process("{$flvTool2} -U {$file}");
         $process->run();
 
